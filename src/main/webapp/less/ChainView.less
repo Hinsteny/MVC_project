@@ -1,0 +1,98 @@
+@import "utils.less";
+
+.ChainView{
+	color:#ccc;
+	overflow-y: auto;
+	.row{
+		height: 72px;
+		margin: 8px;
+		background-color:#f9f9f9;
+		border: 1px solid #fbfbfb;
+		position: relative;
+		.row-name{
+			float:left;
+			width: 152px;
+			height: 72px;
+			padding: 12px 8px;
+			background-color: #fff;
+			border: 1px solid #eee;	
+		}
+		.row-items{
+			margin-left: 153px;
+			height:72px;
+			text-align:center;
+			.item{
+				display: inline-block;
+				padding: 8px 20px;
+				background-color: #fff;
+				color: #888;
+				margin: 20px 8px;
+				border: 1px solid #ddd;
+			}
+		}
+
+		.iconToggleItemEdit{
+			position:absolute;
+			right: 10px;
+			top:28px;
+			&:hover, &.active{
+				color:#60a7d3;
+			}
+		}
+
+		.itemEditContent{
+			position: absolute;
+			right: 45px;
+			top: 8px;
+
+			.newItemInput{
+				width: 240px;
+				height:24px;
+				font-size: 8px;
+				outline:none;
+			}
+			.btnGroup{
+				text-align:right;
+				margin:8px 0px;
+				.btn{
+					width: 64px;
+					height: 24px;
+					line-height: 8px;
+					margin-left: 12px;
+				}
+			}
+		}
+	}
+
+	.rowAddBox{
+		height: 72px;
+		width: 152px;
+		border: 1px solid #ccc;
+		text-align: center;
+		background-color:#fff;
+		margin: 8px;
+		i{
+			display: block;
+			margin: 16px;
+			background-color: ebebeb;
+		}
+		.newRowInput{
+			width: 150px;
+			height:32px;
+			padding-left:4px;
+			font-size: 8px;
+			outline:none;
+			border:none;
+			border-bottom:1px solid #ccc;
+		}
+		.btnGroup{
+			margin-top: 8px;
+			.btn{
+				width: 64px;
+				height: 24px;
+				line-height: 8px;
+				margin-left:4px;
+			}
+		}
+	}
+}

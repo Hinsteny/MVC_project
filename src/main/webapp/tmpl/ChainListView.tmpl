@@ -1,0 +1,39 @@
+<script id="ChainListView" type="text/html">
+	<div class="ChainListView">
+		<div class="topTitle">
+			<h2>MY OUTCOME CHAINS</h2>
+		</div>
+		<div class="line"></div>
+		<div class="searchBox input-wrapper">
+			<i class="glyphicon glyphicon-search"></i>
+			<input name="searchName search-input input-medium" type="text" placeholder="Filter Outcome Chains">
+		</div>
+		<div class="chainListContent">
+			<div class="add-new-chain">
+				<div class="add-new-label">
+					<div class="top">Add New</div>
+					<div class="center"><i class="glyphicon glyphicon-plus"></i></div>
+					<div class="bottom">Outcome Chain</div>
+				</div>
+				<div class="add-new-input">
+					<div class="top"><input type="text" class="form-control" placeholder="Enter Outcome Chain Name Here"></div>
+					<div class="bottom">
+						<span class="btn btn-default btn-xs btnCancel">Cancel</span>
+						<span class="btn btn-primary btn-xs btnAddChain">Add</span>
+					</div>
+				</div>
+			</div>
+			{{> ChainListView-lis}}
+		</div>
+	</div>
+</script>
+
+<script id="ChainListView-lis" type="text/html">
+	{{#each chains}}
+		<div class="chain-box" data-entity="Chain" data-entity-id="{{id}}" data-entity-name="{{name}}">
+			<div class="chainName">
+				<a href="#chain/{{id}}">{{name}}</a>
+			</div>
+		</div>
+	{{/each}}
+</script>

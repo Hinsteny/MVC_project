@@ -1,0 +1,51 @@
+<script id="ChainView" type="text/html">
+	<div class="ChainView" data-entity="Chain" data-entity-id="{{chain.id}}">
+		<div class="rowsCon">
+		</div>
+
+		<div class="rowAddBox">
+			<div class="btnToggleEditRow">
+				<i class="glyphicon glyphicon-plus"></i>
+				<span>Add Row</span>
+			</div>
+
+			<div class="rowEditContent hide">
+				<input type="text" class="newRowInput" placeholder="Enter Row Name">
+				<div class="btnGroup">
+					<button class="btn btn-default btnCancel" >Cancel</button>
+					<button class="btn btn-primary btnAdd" >Add</button>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</script>
+
+<script id="ChainView-rows-rowItem" type="text/html">
+	<div class="row" data-entity="Row" data-rowName="{{name}}" data-rowId="{{id}}">
+		<div class="row-name"  >
+			{{name}}
+		</div>
+		<div class="row-items">
+			
+		</div>
+		<i class="iconToggleItemEdit glyphicon glyphicon-plus"></i>
+	</div>
+</script>
+
+<script id="ChainView-item-edit" type="text/html">
+	<div class="itemEditContent" data-rowId="{{rowId}}">
+		<input type="text" class="newItemInput" placeholder="Enter Outcome Chain Name Here">
+		<div class="btnGroup">
+			<button class="btn btn-default btnCancel" >Cancel</button>
+			<button class="btn btn-primary btnAdd" >Add</button>
+		</div>
+	</div>
+</script>
+
+<script id="ChainView-items-item" type="text/html">
+	<div class="item" data-entity="item" data-item-id="{{id}}">
+		{{name}}
+	</div>			
+</script>
+

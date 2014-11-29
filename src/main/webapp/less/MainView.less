@@ -1,0 +1,58 @@
+@import "utils";
+
+.MainView{
+
+	.navbar{
+		min-height: 40px;
+		height: 40px;
+		margin-bottom: 0px;
+
+		.navbar-brand{
+			height: 40px;
+			padding-left: 8px;
+			padding-top: 8px;
+			padding-bottom: 16px;
+			font-size: 12px;
+			letter-spacing: .2em;
+		}
+
+		.navbar-collapse.collapse{
+			height: 40px;
+			padding-right: 22px;
+
+			.navbar-nav{
+				height: 40px;
+
+				.dropdown{
+					height: 40px;
+
+					a{
+						padding-top: 10px;
+						padding-bottom: 10px;
+					}
+				}
+			}
+		}
+	}
+
+	.MainView-content{
+		position: absolute;
+		top: 40px; right: 0; bottom: 0; left: 0;
+		width:100%;
+	}
+
+	.MainView-leftPanel{
+		position: relative;
+		float: left;
+		margin: 0px 16px 0px 8px;
+		width: 48%;
+	}
+
+
+	.MainView-rightPanel{
+		position: relative;
+		float: right;
+		width: 48%;
+		margin: 0px 8px 0px 16px;
+	}
+}

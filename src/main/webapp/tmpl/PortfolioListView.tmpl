@@ -1,0 +1,39 @@
+<script id="PortfolioListView" type="text/html">
+	<div class="PortfolioListView">
+		<div class="topTitle">
+			<h2>PORTFOLIOS</h2>
+		</div>
+		<div class="line"></div>
+		<div class="searchBox input-wrapper">
+			<i class="glyphicon glyphicon-search"></i>
+			<input name="searchName search-input input-medium" type="text" placeholder="Filter Portfolios">
+		</div>
+		<div class="portfolioListContent">
+			<div class="add-new-portfolio">
+				<div class="add-new-label">
+					<div class="top">Add New</div>
+					<div class="center"><i class="glyphicon glyphicon-plus"></i></div>
+					<div class="bottom">Portfolio</div>
+				</div>
+				<div class="add-new-input">
+					<div class="top"><input type="text" class="form-control" placeholder="Enter Portfolio Name Here"></div>
+					<div class="bottom">
+						<span class="btn btn-default btnCancel">Cancel</span>
+						<span class="btn btn-primary btnAddPortfolio">Add</span>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</script>
+
+<script id="PortfolioListView-lis" type="text/html">
+	{{#each portfolios}}
+		<div class="portfolio-box" data-entity="Portfolio" data-entity-id="{{id}}">
+			<div class="portfolioName">
+				<a href="#portfolio/{{id}}">{{name}}</a>
+			</div>
+		</div>
+	{{/each}}
+</script>

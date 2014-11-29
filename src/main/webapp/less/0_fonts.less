@@ -1,0 +1,27 @@
+@roboto-font-path: 'fonts';
+
+.roboto-font(@type, @weight, @style) {
+    @font-face {
+        font-family: 'Roboto';
+        src: url('@{roboto-font-path}/Roboto-@{type}.ttf') format('truetype');
+        font-weight: @weight;
+        font-style: @style;
+    }
+}
+
+.roboto-font-one(@type, @weight, @style) {
+    .roboto-font('@{type}', @weight, @style);
+}
+
+.roboto-font-pair(@type, @weight) {
+    .roboto-font('@{type}', @weight, normal);
+    .roboto-font('@{type}Italic', @weight, italic);
+}
+
+.roboto-font-one('Italic', 200, italic);
+.roboto-font-one('Regular', 400, normal);
+.roboto-font-pair('Thin', 100);
+.roboto-font-pair('Light', 300);
+.roboto-font-pair('Medium', 500);
+.roboto-font-pair('Bold', 700);
+.roboto-font-pair('Black', 900);

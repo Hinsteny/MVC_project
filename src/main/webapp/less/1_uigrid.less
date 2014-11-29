@@ -1,0 +1,26 @@
+@import "utils";
+
+/* --------- Debug --------- */
+.debug-grid-system{
+	z-index:9999;
+	&-canvas{
+		.fitparent();
+		position: fixed;
+		z-index: 9998;
+		display: none;
+	}
+	.toggleGrid{
+		position: absolute;
+		right:10px;
+		bottom:10px;
+		top:auto;
+		width:20px;
+		height:20px;
+		font-size:20px;
+		opacity: .2;
+		z-index: 9999;
+	}
+}
+/* --------- /Debug --------- */
+
+
